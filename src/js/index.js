@@ -5,7 +5,7 @@
 		el.closest(".header__nav-list").children[1].classList.toggle("opacity");
 		// alert(el.closest(".header__nav-list").children[1]);
 	};
-	Array.from(document.querySelectorAll("#arrow-icon")).forEach(el => {
+	Array.from(document.querySelectorAll(".arrow-icon")).forEach(el => {
 		el.addEventListener("click",modify)
 	});
 	const showMobileNav = (e) => {
@@ -20,7 +20,7 @@
 		mobileNavElement.classList.toggle("show-mobile-nav");
 	};
 	const showMobileNavItems = (e) => {
-		if(e.target.id === "js--mobile-nav"){
+		if(e.target.classList[0] === "js--mobile-nav"){
 			let target = e.target;
 			target.classList.toggle("rotate");
 			target.parentNode.children[0].classList.toggle("toggle-color");
