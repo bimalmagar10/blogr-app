@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	@include responsive(small-desktop) {
+		font-size: 56.25%;
+	}
+	@include responsive(xs-phone){
+		font-size: 50%;
+	}
+	// @include responsive(tablet) {
+	// 	font-size: 50%;
+	// }
+}
+body {
+	box-sizing: border-box;
+	line-height: 1;
+	font-size: $default-font-size;
+	font-family: $font-family-1;
+	@include responsive(small-phone){
+		font-size: 1.8rem;
+	}
+	// background-image: $gradient-2;
+
+}
+hr {
+	height: 1px;
+	border:none;
+	width: 100%;
+	background-color:#e2e2e4;
+}
+.attribution { font-size: 2rem; text-align: center; }
+  .attribution a { color: hsl(228, 45%, 44%); }
